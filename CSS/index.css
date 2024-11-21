@@ -1,11 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Sour+Gummy:ital,wght@0,100..900;1,100..900&display=swap');
 
 :root{
-    --nav-color: #212135;
-    --primary-color: gray;
-    --contain-color: #212135;
+    --nav-color: #004952;
+    --primary-color: #004952;
+    --contain-color: #004952;
     --color-font: white;
-    --color-title: gray; 
+    --color-title: black; 
 }
 
 .sour-gummy-font {
@@ -21,18 +21,23 @@
     margin: 0;
     padding: 0;
 }
-
-
-body{
-    font-family: "Sour Gummy";
-    background-color: var(--primary-color);
-    color: white;
- --scrollbar-border-thickness: 0px; --scrollbar-width: 10px; --scrollbar-height: 0px; --scrollbar-border-radius: 12px; --scrollbar-track-color: #FFFFFF00; --scrollbar-thumb-color: #212135; --scrollbar-button-color: #FFFFFF; --scrollbar-corner-color: #FF0000; --scrollbar-border-color: #000000; } body::-webkit-scrollbar { width: var(--scrollbar-width, 20px); height: var(--scrollbar-height, 20px); }body::-webkit-scrollbar-thumb { background: var(--scrollbar-thumb-color, #3B82F6); border: var(--scrollbar-border-thickness, 3px) solid var(--scrollbar-border-color, rgb(255, 255, 255)); border-radius: var(--scrollbar-border-radius, 4px); }body::-webkit-scrollbar-track { background: var(--scrollbar-track-color, #A1A1AA); }body::-webkit-scrollbar-corner { background: var(--scrollbar-corner-color, #FFFFFF); border: var(--scrollbar-border-thickness, 3px) solid var(--scrollbar-border-color, rgb(255, 255, 255)); border-radius: var(--scrollbar-border-radius, 4px); }body::-webkit-scrollbar-button:vertical:start:increment, #preview::-webkit-scrollbar-button:vertical:end:decrement, #preview::-webkit-scrollbar-button:horizontal:start:increment, #preview::-webkit-scrollbar-button:horizontal:end:decrement { display: var(--show-double-buttons, none); }
-
-body::selection{
+*::selection{
     background-color: var(--color-font);
     color: black;
 }
+
+body{
+    font-family: "Sour Gummy";
+    color: white;
+    background-image: url(../images/fondo.jpg); /* Ruta de tu imagen de fondo */
+    background-size: cover;  /* Hace que el fondo cubra toda la pantalla */
+    background-position: center;  /* Centra el fondo */
+    background-attachment: fixed;  /* Opcional: hace que el fondo se quede fijo cuando se hace scroll */
+    height: 100vh;  /* Asegura que el fondo cubra toda la altura de la pantalla */
+    margin: 0;
+     --scrollbar-width: 10px; --scrollbar-height: 0px; --scrollbar-border-radius: 0px; --scrollbar-thumb-color: #004952; --scrollbar-border-thickness: 0px; } body::-webkit-scrollbar { width: var(--scrollbar-width, 20px); height: var(--scrollbar-height, 20px); }body::-webkit-scrollbar-thumb { background: var(--scrollbar-thumb-color, #3B82F6); border: var(--scrollbar-border-thickness, 3px) solid var(--scrollbar-border-color, rgb(255, 255, 255)); border-radius: var(--scrollbar-border-radius, 4px); }body::-webkit-scrollbar-track { background: var(--scrollbar-track-color, #A1A1AA); }body::-webkit-scrollbar-corner { background: var(--scrollbar-corner-color, #FFFFFF); border: var(--scrollbar-border-thickness, 3px) solid var(--scrollbar-border-color, rgb(255, 255, 255)); border-radius: var(--scrollbar-border-radius, 4px); }body::-webkit-scrollbar-button:vertical:start:increment, #preview::-webkit-scrollbar-button:vertical:end:decrement, #preview::-webkit-scrollbar-button:horizontal:start:increment, #preview::-webkit-scrollbar-button:horizontal:end:decrement { display: var(--show-double-buttons, none); 
+    }
+
 
 
 .navegation{
@@ -113,6 +118,7 @@ body::selection{
     background-color: var(--color-font);
     border-radius: 10px;
     border: none;
+    box-shadow: 10px 10px 10px var(--contain-color);
 }
 
 
@@ -147,8 +153,8 @@ body::selection{
     font-size: 30px;
     margin: 10px;
     padding: 5px;
-    background-color: var(--color-title);
-    border-radius: 15px;  
+    background-color: var(--primary-color);
+    border-radius: 15px;   
 }
 
 
@@ -183,16 +189,18 @@ body::selection{
 
 /*modulo my services*/
 .my-services{
-    background-color: var(--primary-color);
     margin: 100px;
     text-align: center;
+    padding: 10px;
+    border-radius: 15px;
     
 }
 
 
 .services {
-    margin: 10px;
-    display: flex;    
+    display: flex;
+    justify-content: center;
+    overflow-x: auto; 
 }
 
 
@@ -201,10 +209,11 @@ body::selection{
     margin: 10px;
     padding: 10px;
     border-radius: 15px;
-    height: 300px;
-    width: 500px;
+    margin-left: 13px;
+    width: 170px;
     display: flex;
     flex-direction: column;
+    border: #ffffff 0.1px solid;
 }
 
 .card-services:hover{
@@ -228,9 +237,6 @@ body::selection{
 .container-experiences{
     padding: 20px;
     margin: 100px 120px;
-    box-shadow: 10px 10px 10px var(--contain-color);
-    background-color: var(--contain-color);
-    border: #040407 2px solid;
     height: 500px;
     border-radius: 15px;
     
@@ -238,7 +244,7 @@ body::selection{
 }
 
 .card-experiences{
-    
+    border: #ffffff 1px solid;
     border-radius: 15px;
     margin-bottom: 30px;
     text-align: center;
@@ -249,7 +255,7 @@ body::selection{
 
 
 .card-experiences:hover{
-    background-color: var(--color-title);
+    background-color: var(--primary-color);
     color: white; 
 }
 
@@ -303,8 +309,7 @@ body::selection{
     font-size: 35px;
     margin: 10px;
     padding: 5px;
-    background-color: var(--primary-color);
-    color: var(--nav-color);
+    color: var(--color-font);
 }
 
 /*Tecnologias*/
@@ -312,9 +317,9 @@ body::selection{
 .overview-tecnologis{
     flex: 1;
     border-radius: 15px;
+    padding: 10px;
     margin: 10px;
-    background-color: var(--primary-color);
-    color: var(--nav-color);
+    color: var(--color-font);
     
 }
 
@@ -325,19 +330,18 @@ body::selection{
     display: flex;
     flex-wrap: wrap;
     overflow-x: auto;
-    height: 380px;
-    
-    --scrollbar-border-thickness: 0px;
-    --scrollbar-width: 10px;
-    --scrollbar-height: 0px;
-     --scrollbar-border-radius: 12px;
-      --scrollbar-track-color: #FFFFFF00;
-       --scrollbar-thumb-color: #212135;
-        --scrollbar-button-color: #FFFFFF; 
-        --scrollbar-border-color: #000000;
-        } .overview::-webkit-scrollbar { width: var(--scrollbar-width, 20px);
-            height: var(--scrollbar-height, 20px);
-            }.overview::-webkit-scrollbar-thumb { background: var(--scrollbar-thumb-color, #3B82F6); border: var(--scrollbar-border-thickness, 3px) solid var(--scrollbar-border-color, rgb(255, 255, 255)); border-radius: var(--scrollbar-border-radius, 4px); }.overview::-webkit-scrollbar-track { background: var(--scrollbar-track-color, #A1A1AA); }.overview::-webkit-scrollbar-corner { background: var(--scrollbar-corner-color, #FFFFFF); border: var(--scrollbar-border-thickness, 3px) solid var(--scrollbar-border-color, rgb(255, 255, 255)); border-radius: var(--scrollbar-border-radius, 4px); }.overview::-webkit-scrollbar-button:vertical:start:increment, #preview::-webkit-scrollbar-button:vertical:end:decrement, #preview::-webkit-scrollbar-button:horizontal:start:increment, #preview::-webkit-scrollbar-button:horizontal:end:decrement { display: var(--show-double-buttons, none); }
+    height: 380px; 
+    --scrollbar-width: 10px; --scrollbar-height: 0px; --scrollbar-border-radius: 0px; --scrollbar-thumb-color: #004952; --scrollbar-border-thickness: 0px; 
+}
+.overview::-webkit-scrollbar { width: var(--scrollbar-width, 20px); height: var(--scrollbar-height, 20px); 
+}
+.overview::-webkit-scrollbar-thumb { background: var(--scrollbar-thumb-color, #3B82F6); border: var(--scrollbar-border-thickness, 3px) solid var(--scrollbar-border-color, rgb(255, 255, 255)); border-radius: var(--scrollbar-border-radius, 4px); 
+}
+.overview::-webkit-scrollbar-track { background: var(--scrollbar-track-color, #A1A1AA); 
+}
+.overview::-webkit-scrollbar-corner { background: var(--scrollbar-corner-color, #FFFFFF); border: var(--scrollbar-border-thickness, 3px) solid var(--scrollbar-border-color, rgb(255, 255, 255)); border-radius: var(--scrollbar-border-radius, 4px); 
+}
+.overview::-webkit-scrollbar-button:vertical:start:increment, #preview::-webkit-scrollbar-button:vertical:end:decrement, #preview::-webkit-scrollbar-button:horizontal:start:increment, #preview::-webkit-scrollbar-button:horizontal:end:decrement { display: var(--show-double-buttons, none); }
 
 .card-tecnology{
     flex: 1;
@@ -470,19 +474,27 @@ body::selection{
     margin: 10px;
     margin-top: -10px;
     padding: 5px;
+    font-weight: 600;
 }
 
 
 .contact-info{
     margin: 10px;
     font-size: 20px;
+    font-weight: 400;
 }
 
+.contact-info-1{
+    margin: 10px;
+    font-size: 20px;
+    font-weight: 100;
+}
 
 footer{
     background-color: var(--contain-color);
     text-align: center;
     font-size: 12px;
+    width: 100%;
 
 }
 
@@ -596,6 +608,7 @@ footer{
         overflow-x: auto;
         display:grid;
         grid-template-columns: repeat(7, 1fr);
+        justify-content: flex-start;
     }
 
 
@@ -632,17 +645,17 @@ footer{
     .container-experiences{
         padding: 10px;
         margin: 20px 60px;
-        height: 370px;
+        height: 350px;
         border-radius: 15px;
         
         
     }
 
 
-    .card-experiences{
-        padding: 10px;   
-        width: 250px;
+    .card-experiences{   
+        width: 100%;
         height: 290px;
+        padding: 0;
     }
 
 
@@ -674,17 +687,20 @@ footer{
         padding: 1px;
     }
 
+   
+
     .card-tecnology{
         margin: 20px;
         height: 200px;
     }
+
 
     /*Aqui ya */
     /*dev tools*/
 
 
     .dev-tools{
-        height: 800px;
+        height: 820px;
         display: inline-block;
         padding: 10px;
         margin: 0 10%;
@@ -697,15 +713,15 @@ footer{
         padding: 5px;
     }
     .contact{
-        height: 60px;
+        width: 95%;
+        height: 70px;
         display: inline-block;
     }
 
     .container-form{
-        width: 380px;
-        padding: 2px;
-        margin: 2px;
-        
+        width: 100%;
+        margin: 0;
+        padding: 0;
     }
 
     .form li{
@@ -746,11 +762,9 @@ footer{
     /*----------------------*/
 
     .card-info-contact{
-        width: 380px;
-        background-color: var(--contain-color);
+        width: 100%;
         padding: 2px;
         margin: 2px;
-
     }
 
     .title-contact{
@@ -758,26 +772,19 @@ footer{
         font-size: 20px;
         margin: 5px;
         padding: 5px;
+        font-weight: 600;
     }
-
-
-    .contact-info{
-        margin: 15px;
-        font-size: 20px;
-    }
-
 
     footer{
         text-align: center;
         font-size: 12px;
-
     }
 
     .creditos{
         font-size: 15px;
         margin-top: 10px;
-        padding: 5px;
-        height: 30px;
+        padding: 10px;
+        height: 50px;
     }
 
 
