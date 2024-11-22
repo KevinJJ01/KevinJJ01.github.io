@@ -500,6 +500,10 @@ footer{
 
 @media (min-width: 320px) and (max-width: 767px){
 
+    body{
+        
+    }
+
     .navegation{
         height: 30px;
         padding: 10px;
