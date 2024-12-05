@@ -50,6 +50,39 @@ body{
     align-items: center;
 }
 
+.menu {
+    position: relative;
+    
+}
+
+.icon-menu{
+    margin: 10px ;
+    padding: 2px;
+    font-size: 25px;
+}
+
+.menu-content {
+    display: none;
+    position: absolute;
+    background-color: var(--contain-color);
+    min-width: 180px;
+    padding: 12px 16px;
+    border: #011826 1px solid;
+}
+
+.menu:hover .menu-content {
+    display: block;
+}
+
+.lista-menu{
+    list-style: none;
+}
+
+.lista-menu a{
+    color: var(--color-font);
+    text-decoration: none;
+}
+
 .profile{
     display: flex;
     align-items: center;
@@ -78,8 +111,9 @@ body{
 }
 
 .navegation .icon:hover {
-    color: var(--primary-color);  
+    color: gray;  
 }
+
 
 
 .container-title{
@@ -498,11 +532,20 @@ footer{
 
 }
 
+.card-info-contact .icon {
+    height: 40px;
+    width: 40px;
+    margin:0px 8px;   
+    font-size: 25px;
+    color: white;
+}
+
+.card-info-contact .icon:hover {
+    color: gray;  
+}
+
 @media (min-width: 320px) and (max-width: 767px){
 
-    body{
-        
-    }
 
     .navegation{
         height: 30px;
