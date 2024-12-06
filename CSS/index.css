@@ -61,6 +61,10 @@ body{
     font-size: 25px;
 }
 
+.icon-menu:hover{
+    color: #011826;
+}
+
 .menu-content {
     display: none;
     position: absolute;
@@ -146,13 +150,18 @@ body{
 
 .cv-but{
     height: 40px;
-    width: 100;
     padding: 7px;
     margin: 2px;
     background-color: var(--color-font);
     border-radius: 10px;
     border: none;
     box-shadow: 10px 10px 10px var(--contain-color);
+}
+
+.cv-but:hover{
+    background-color: #004952;
+    color: #FFFFFF;
+    border: #011826 0.5px solid;
 }
 
 
@@ -394,6 +403,11 @@ body{
     border: #011826 2px solid;
     object-fit: contain;
 }
+.icon-leng:hover{
+    border: var(--primary-color) 2px solid;
+    object-fit: cover;
+
+}
 
 .description-tecnology{
     font-size: 20px;
@@ -487,7 +501,8 @@ body{
     border: none;
 }
 .form button:hover {
-    background-color: rgb(50, 163, 255);
+    background-color: var(--color-title);
+    color: var(--color-font);
     
 }
 
