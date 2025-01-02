@@ -1,4 +1,4 @@
-emailjs.init("e2Sl3H41c1FHJlRF7"); // Reemplaza con tu ID de usuario
+emailjs.init("e2Sl3H41c1FHJlRF7"); 
 
 document.querySelector(".form").addEventListener("submit", function (event) {
   event.preventDefault();

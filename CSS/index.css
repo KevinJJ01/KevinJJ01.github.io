@@ -1,11 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Sour+Gummy:ital,wght@0,100..900;1,100..900&display=swap');
 
 :root{
-    --nav-color: #004952;
-    --primary-color: #004952;
-    --contain-color: #004952;
+    --nav-color: #000000;
+    --primary-color: #001f38;
+    --contain-color: #001f38;
     --color-font: white;
     --color-title: black; 
+    --background-color: black;
 }
 
 .sour-gummy-font {
@@ -29,26 +30,41 @@
 body{
     font-family: "Sour Gummy";
     color: white;
-    background-image: url(../images/fondo.jpg);
+    /* background-image: url(../images/fondo.jpg); */
+    background-color: var(--background-color);
     background-size: cover;  
     background-position: center;  
     background-attachment: fixed;  
     height: 100vh;  
     margin: 0;
-     --scrollbar-width: 10px; --scrollbar-height: 0px; --scrollbar-border-radius: 0px; --scrollbar-thumb-color: #004952; --scrollbar-border-thickness: 0px; } body::-webkit-scrollbar { width: var(--scrollbar-width, 20px); height: var(--scrollbar-height, 20px); }body::-webkit-scrollbar-thumb { background: var(--scrollbar-thumb-color, #3B82F6); border: var(--scrollbar-border-thickness, 3px) solid var(--scrollbar-border-color, rgb(255, 255, 255)); border-radius: var(--scrollbar-border-radius, 4px); }body::-webkit-scrollbar-track { background: var(--scrollbar-track-color, #A1A1AA); }body::-webkit-scrollbar-corner { background: var(--scrollbar-corner-color, #FFFFFF); border: var(--scrollbar-border-thickness, 3px) solid var(--scrollbar-border-color, rgb(255, 255, 255)); border-radius: var(--scrollbar-border-radius, 4px); }body::-webkit-scrollbar-button:vertical:start:increment, #preview::-webkit-scrollbar-button:vertical:end:decrement, #preview::-webkit-scrollbar-button:horizontal:start:increment, #preview::-webkit-scrollbar-button:horizontal:end:decrement { display: var(--show-double-buttons, none); 
+     --scrollbar-width: 10px; --scrollbar-height: 0px; --scrollbar-border-radius: 0px; --scrollbar-thumb-color: var(--primary-color); --scrollbar-border-thickness: 0px; } body::-webkit-scrollbar { width: var(--scrollbar-width, 20px); height: var(--scrollbar-height, 20px); }body::-webkit-scrollbar-thumb { background: var(--scrollbar-thumb-color, #3B82F6); border: var(--scrollbar-border-thickness, 3px) solid var(--scrollbar-border-color, rgb(255, 255, 255)); border-radius: var(--scrollbar-border-radius, 4px); }body::-webkit-scrollbar-track { background: var(--scrollbar-track-color, #A1A1AA); }body::-webkit-scrollbar-corner { background: var(--scrollbar-corner-color, #FFFFFF); border: var(--scrollbar-border-thickness, 3px) solid var(--scrollbar-border-color, rgb(255, 255, 255)); border-radius: var(--scrollbar-border-radius, 4px); }body::-webkit-scrollbar-button:vertical:start:increment, #preview::-webkit-scrollbar-button:vertical:end:decrement, #preview::-webkit-scrollbar-button:horizontal:start:increment, #preview::-webkit-scrollbar-button:horizontal:end:decrement { display: var(--show-double-buttons, none); 
     }
 
 
 
 .navegation{
-    background-color: var(--nav-color);
+    background-color: #00000000;
     color: var(--color-font);
     display: flex;
     height: 70px;
+    width: 98.5vw;
     padding: 10px;
     justify-content: space-between;
     align-items: center;
+    position: fixed;
+    animation: animation-scroll-nav linear both;
+    animation-timeline: scroll(root block);
+    animation-range: 0 250px;
+    z-index: 9999;
 }
+
+@keyframes animation-scroll-nav{
+    to{ 
+        background-color: var(--contain-color);
+        color: var(--color-font);
+    }
+}
+
 
 .icon-menu{
     margin: 10px ;
@@ -58,19 +74,23 @@ body{
 
 .icon-menu:hover{
     color: #011826;
+
 }
 
 .menu-content {
     display: none;
-    position: absolute;
+    position: fixed;
     background-color: var(--contain-color);
-    min-width: 180px;
-    padding: 12px 16px;
+    min-width: 280px;
+    height: auto;
+    padding: 16px 16px;
     border: #011826 1px solid;
+    font-size: 25px;
 }
 
 .menu:hover .menu-content {
     display: block;
+    
 }
 
 .lista-menu{
@@ -121,8 +141,7 @@ body{
     height: 250px;
     display: flex;
     justify-content: center;
-    padding-top: 80px;
-
+    padding-top: 120px;
 }
 
 
@@ -185,11 +204,12 @@ body{
 }
 
 .cv-but:hover{
-    background-color: #004952;
+    background-color: var(--primary-color);
     color: #FFFFFF;
-    border: #011826 0.5px solid;
+    border: var(--primary-color) 0.5px solid;
     scale: 1.1;
     transition-duration: 2s;
+    box-shadow: 5px 5px 5px var(--color-font);
 }
 
 
@@ -312,20 +332,19 @@ body{
     display: flex;
     flex-direction: column;
     border: #ffffff 0.1px solid;
-    animation-name: container-card-deslizing;
-    animation-duration: 3s;
-    animation-iteration-count: 1;
-    transition: all 300ms ease-in-out;
+    animation: container-card-deslizing linear both;
+    animation-timeline: scroll(root block);
+    animation-range: 0 700px;
 }
 
 
 @keyframes container-card-deslizing{
     from{
-        transform: translateY(-100px);
+        transform: translatex(-100px);
         opacity: 0.1;
     }
     to{
-        transform: translateY(0px);
+        transform: translatex(0px);
         opacity: 1;
     }
 }
@@ -449,7 +468,7 @@ body{
     flex-wrap: wrap;
     overflow-x: auto;
     height: 380px; 
-    --scrollbar-width: 10px; --scrollbar-height: 0px; --scrollbar-border-radius: 0px; --scrollbar-thumb-color: #004952; --scrollbar-border-thickness: 0px; 
+    --scrollbar-width: 10px; --scrollbar-height: 0px; --scrollbar-border-radius: 0px; --scrollbar-thumb-color: var(--primary-color); --scrollbar-border-thickness: 0px; 
 }
 .overview::-webkit-scrollbar { width: var(--scrollbar-width, 20px); height: var(--scrollbar-height, 20px); 
 }
@@ -645,6 +664,7 @@ footer{
 
     .navegation{
         height: 30px;
+        width: 95%;
         padding: 10px;
         justify-content: space-between;
         align-items: center;
@@ -668,7 +688,7 @@ footer{
         height: 220px;
         display: flex;
         justify-content: center;
-        padding-top: 20px;
+        padding-top: 40px;
     
     }
     
