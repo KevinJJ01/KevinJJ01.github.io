@@ -223,8 +223,10 @@ body{
     flex: 1;
     margin: 0 100px;
     padding: 20px;
-    background-color: var(--contain-color);
+    background-color: var(--background-color);
     border-radius: 15px;
+    border: 1px solid var(--contain-color);
+    box-shadow: 10px 10px 10px rgba(1, 37, 54, 0.315); 
     animation-name:container-im-deslizing;
     animation-duration: 3s;
     animation-iteration-count: 1;
@@ -242,12 +244,15 @@ body{
 }
 
 
+
 .container-studies{
     flex: 1;
     margin: 0 100px;
     padding: 20px;
-    background-color: var(--contain-color);
+    background-color: var(--background-color);
     border-radius: 15px;
+    border: 1px solid var(--contain-color);
+    box-shadow: 10px 10px 10px rgba(1, 37, 54, 0.315); 
     animation-name: container-studies-deslizing;
     animation-duration: 3s;
     animation-iteration-count: 1;
@@ -379,7 +384,8 @@ body{
 }
 
 .card-experiences{
-    border: #ffffff 1px solid;
+    border: 1px solid var(--contain-color);
+    box-shadow: 10px 10px 10px rgba(1, 37, 54, 0.315); 
     border-radius: 15px;
     margin-bottom: 30px;
     text-align: center;
@@ -525,6 +531,33 @@ body{
     
 }
 
+.my-proyects:hover{
+    animation-name: border-custom;
+    animation-duration: 5s;
+    animation-iteration-count: 10; 
+}
+
+@keyframes border-custom{
+    0%{
+        border: 1px solid var(--background-color);
+    }
+    20%{
+        border: 1.5px solid var(--contain-color);
+    }
+    40%{
+        border: 1px solid var(--background-color);
+    }
+    60%{
+        border: 1.5px solid var(--contain-color);
+    }
+    80%{
+        border: 1px solid var(--background-color);
+    }
+    100%{
+        border: 1.5px solid var(--contain-color);
+    }
+}
+
 .cards-proyect{
     display: flex;
     justify-content: center;
@@ -664,7 +697,7 @@ footer{
 
     .navegation{
         height: 30px;
-        width: 95%;
+        width: 96vw;
         padding: 10px;
         justify-content: space-between;
         align-items: center;
@@ -712,7 +745,7 @@ footer{
     .container-im{
         margin: 0 10px;
         padding: 10px;
-
+        height: 200px;
     }
     
     
@@ -721,6 +754,7 @@ footer{
         flex: 1;
         margin: 10px 10px;
         padding: 5px;
+        height: 250px;
     }
     
     
@@ -776,11 +810,11 @@ footer{
 
 
     .card-services{
+        justify-content: center;
         margin: 4px;
         padding: 4px;
-        height: 150px;
         width: 150px;
-        justify-content: center;
+        height: 150px;
         
     }
 
@@ -807,18 +841,16 @@ footer{
 
     .container-experiences{
         padding: 10px;
-        margin: 20px 60px;
-        height: 350px;
+        margin: 30px 60px;
+        height: 34%;
         border-radius: 15px;
-        
-        
     }
 
 
     .card-experiences{   
         width: 100%;
-        height: 290px;
-        padding: 0;
+        height: 50%;
+        padding: 8px;
     }
 
 
@@ -853,12 +885,16 @@ footer{
    
 
     .card-tecnology{
-        margin: 20px;
-        height: 200px;
+        padding: 10px;
+        margin: 10px;
+        height: 280px;
+    }
+
+    .my-proyects{
+        height: 250px;
     }
 
 
-    /*Aqui ya */
     /*dev tools*/
 
 
@@ -871,9 +907,10 @@ footer{
 
     .sr-title{
         text-align: center;
-        font-size: 15px;
+        font-size: 30px;
         margin: 5px;
         padding: 5px;
+        font-weight: 700;
     }
     .contact{
         width: 95%;
