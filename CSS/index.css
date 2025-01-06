@@ -37,7 +37,7 @@ body{
     background-attachment: fixed;  
     height: 100vh;  
     margin: 0;
-     --scrollbar-width: 10px; --scrollbar-height: 0px; --scrollbar-border-radius: 0px; --scrollbar-thumb-color: var(--primary-color); --scrollbar-border-thickness: 0px; } body::-webkit-scrollbar { width: var(--scrollbar-width, 20px); height: var(--scrollbar-height, 20px); }body::-webkit-scrollbar-thumb { background: var(--scrollbar-thumb-color, #3B82F6); border: var(--scrollbar-border-thickness, 3px) solid var(--scrollbar-border-color, rgb(255, 255, 255)); border-radius: var(--scrollbar-border-radius, 4px); }body::-webkit-scrollbar-track { background: var(--scrollbar-track-color, #A1A1AA); }body::-webkit-scrollbar-corner { background: var(--scrollbar-corner-color, #FFFFFF); border: var(--scrollbar-border-thickness, 3px) solid var(--scrollbar-border-color, rgb(255, 255, 255)); border-radius: var(--scrollbar-border-radius, 4px); }body::-webkit-scrollbar-button:vertical:start:increment, #preview::-webkit-scrollbar-button:vertical:end:decrement, #preview::-webkit-scrollbar-button:horizontal:start:increment, #preview::-webkit-scrollbar-button:horizontal:end:decrement { display: var(--show-double-buttons, none); 
+     --scrollbar-width: 10px; --scrollbar-height: 0px; --scrollbar-border-radius: 0px; --scrollbar-thumb-color: var(--primary-color); --scrollbar-border-thickness: 0px; } body::-webkit-scrollbar { width: var(--scrollbar-width, 20px); height: var(--scrollbar-height, 20px); }body::-webkit-scrollbar-thumb { background: var(--scrollbar-thumb-color, #3B82F6); border: var(--scrollbar-border-thickness, 3px) solid var(--scrollbar-border-color, rgb(255, 255, 255)); border-radius: var(--scrollbar-border-radius, 4px); }body::-webkit-scrollbar-track { background: var(--scrollbar-track-color, #a1a1aa00); }body::-webkit-scrollbar-corner { background: var(--scrollbar-corner-color, #FFFFFF); border: var(--scrollbar-border-thickness, 3px) solid var(--scrollbar-border-color, rgb(255, 255, 255)); border-radius: var(--scrollbar-border-radius, 4px); }body::-webkit-scrollbar-button:vertical:start:increment, #preview::-webkit-scrollbar-button:vertical:end:decrement, #preview::-webkit-scrollbar-button:horizontal:start:increment, #preview::-webkit-scrollbar-button:horizontal:end:decrement { display: var(--show-double-buttons, none); 
     }
 
 
@@ -480,7 +480,7 @@ body{
 }
 .overview::-webkit-scrollbar-thumb { background: var(--scrollbar-thumb-color, #3B82F6); border: var(--scrollbar-border-thickness, 3px) solid var(--scrollbar-border-color, rgb(255, 255, 255)); border-radius: var(--scrollbar-border-radius, 4px); 
 }
-.overview::-webkit-scrollbar-track { background: var(--scrollbar-track-color, #A1A1AA); 
+.overview::-webkit-scrollbar-track { background: var(--scrollbar-track-color, #a1a1aa00); 
 }
 .overview::-webkit-scrollbar-corner { background: var(--scrollbar-corner-color, #FFFFFF); border: var(--scrollbar-border-thickness, 3px) solid var(--scrollbar-border-color, rgb(255, 255, 255)); border-radius: var(--scrollbar-border-radius, 4px); 
 }
@@ -697,7 +697,7 @@ footer{
 
     .navegation{
         height: 30px;
-        width: 96vw;
+        width: 112vw;
         padding: 10px;
         justify-content: space-between;
         align-items: center;
@@ -841,15 +841,15 @@ footer{
 
     .container-experiences{
         padding: 10px;
-        margin: 30px 60px;
-        height: 34%;
+        margin: 40px 60px;
+        height: 40%;
         border-radius: 15px;
     }
 
 
     .card-experiences{   
         width: 100%;
-        height: 50%;
+        height: 30%;
         padding: 8px;
     }
 
