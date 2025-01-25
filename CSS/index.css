@@ -9,6 +9,15 @@
     --background-color: black;
 }
 
+/* :root{
+    '--nav-color': 'rgb(238, 238, 238)',
+    '--primary-color': '#005091',
+    '--contain-color': '#005091',
+    '--color-font': 'rgb(0, 0, 0)',
+    '--color-title': 'rgb(255, 255, 255)',
+    '--background-color': 'rgb(238, 238, 238)'
+} */
+
 .sour-gummy-font {
     font-family: "Sour Gummy", sans-serif;
     font-optical-sizing: auto;
@@ -24,12 +33,12 @@
 }
 *::selection{
     background-color: var(--color-font);
-    color: black;
+    color: var(--color-font);
 }
 
 body{
     font-family: "Sour Gummy";
-    color: white;
+    color: var(--color-font);
     /* background-image: url(../images/fondo.jpg); */
     background-color: var(--background-color);
     background-size: cover;  
@@ -43,7 +52,7 @@ body{
 
 
 .navegation{
-    background-color: #00000000;
+    background-color: var(--background-color);
     color: var(--color-font);
     display: flex;
     height: 70px;
@@ -66,14 +75,14 @@ body{
 }
 
 
-.icon-menu{
+/* .icon-menu{
     margin: 10px ;
     padding: 2px;
     font-size: 25px;
 }
 
 .icon-menu:hover{
-    color: #011826;
+    color: var(--color-font);
 
 }
 
@@ -100,7 +109,7 @@ body{
 .lista-menu a{
     color: var(--color-font);
     text-decoration: none;
-}
+} */
 
 .profile{
     display: flex;
@@ -126,7 +135,8 @@ body{
     width: 40px;
     margin:0px 8px;   
     font-size: 25px;
-    color: white;
+    color: var(--color-font);
+    cursor: pointer;
 }
 
 .navegation .icon:hover {
@@ -182,14 +192,16 @@ body{
     height: 40px;
     padding: 7px;
     margin: 2px;
-    background-color: var(--color-font);
+    background-color: var(--primary-color);
     border-radius: 10px;
     border: none;
-    box-shadow: 10px 10px 10px var(--contain-color);
+    box-shadow: 3px 4px 3px var(--color-font);
     animation-name: button-deslizing;
     animation-duration: 3s;
     animation-iteration-count: 1;
     transition: all 300ms ease-in-out;
+    cursor: pointer;
+    color: var(--color-font);
 }
 
 @keyframes button-deslizing{
@@ -205,7 +217,7 @@ body{
 
 .cv-but:hover{
     background-color: var(--primary-color);
-    color: #FFFFFF;
+    color: var(--color-font);
     border: var(--primary-color) 0.5px solid;
     scale: 1.1;
     transition-duration: 2s;
@@ -226,7 +238,7 @@ body{
     background-color: var(--background-color);
     border-radius: 15px;
     border: 1px solid var(--contain-color);
-    box-shadow: 10px 10px 10px rgba(1, 37, 54, 0.315); 
+    box-shadow: 10px 10px 10px var(--primary-color); 
     animation-name:container-im-deslizing;
     animation-duration: 3s;
     animation-iteration-count: 1;
@@ -252,7 +264,7 @@ body{
     background-color: var(--background-color);
     border-radius: 15px;
     border: 1px solid var(--contain-color);
-    box-shadow: 10px 10px 10px rgba(1, 37, 54, 0.315); 
+    box-shadow: 10px 10px 10px var(--primary-color); 
     animation-name: container-studies-deslizing;
     animation-duration: 3s;
     animation-iteration-count: 1;
@@ -336,7 +348,7 @@ body{
     width: 170px;
     display: flex;
     flex-direction: column;
-    border: #ffffff 0.1px solid;
+    border: var(--primary-color) 0.1px solid;
     animation: container-card-deslizing linear both;
     animation-timeline: scroll(root block);
     animation-range: 0 700px;
@@ -398,7 +410,7 @@ body{
 
 .card-experiences:hover{
     background-color: var(--primary-color);
-    color: white; 
+    color: var(--color-font); 
     scale: 1.1;
 }
 
@@ -502,10 +514,12 @@ body{
     margin: 10px;
     border-radius: 50%;
     border: #011826 2px solid;
+    color: var(--color-font);
     object-fit: contain;
     animation-duration: 3s;
     animation-iteration-count: 1;
     transition: all 300ms ease-in-out;
+    cursor: pointer;
 }
 .icon-leng:hover{
     border: var(--primary-color) 2px solid;
@@ -603,18 +617,19 @@ body{
 
 
 .form input{
-    background-color: var(--color-font);
+    background-color: var(--nav-color);
     height: 20px;
     width: 500px;
     padding: 5px;
     margin-left: 5px;
     border-radius: 15px;
     font-size: 15px;
+    color: var(--color-font);
 }
 
 
 .form textarea{
-    background-color: var(--color-font);
+    background-color: var(--nav-color);
     width: 500px;
     height: 100px;
     padding: 5px;
@@ -622,6 +637,7 @@ body{
     margin-left: 5px;
     border-radius: 15px;
     font-size: 15px;
+    color: var(--color-font);
 }
 
 .form button {
@@ -629,14 +645,15 @@ body{
     width: 100;
     padding: 7px;
     margin: 2px;
-    background-color: var(--color-font);
+    background-color: var(--nav-color);
+    color: var(--color-font);
     border-radius: 10px;
     border: none;
+    cursor: pointer;
 }
 .form button:hover {
-    background-color: var(--color-title);
-    color: var(--color-font);
-    
+    background-color: var(--primary-color);
+    border: 1px solid var(--nav-color);
 }
 
 
@@ -644,7 +661,7 @@ body{
 
 .card-info-contact{
     width: 700px;
-    background-color: var(--contain-color);
+    background-color: var(--primary-color);
     padding: 50px;
     margin: 50px;
 
@@ -685,11 +702,16 @@ footer{
     width: 40px;
     margin:0px 8px;   
     font-size: 25px;
-    color: white;
+    color: var(--color-font);
+    cursor: pointer;
 }
 
 .card-info-contact .icon:hover {
-    color: gray;  
+    color: var(--nav-color);  
+}
+
+.name-in{
+    background-color: var(--nav-color);
 }
 
 @media (min-width: 320px) and (max-width: 767px){
@@ -697,7 +719,7 @@ footer{
 
     .navegation{
         height: 30px;
-        width: 96vw;
+        width: 94vw;
         padding: 10px;
         justify-content: space-between;
         align-items: center;
@@ -949,7 +971,6 @@ footer{
         padding: 2px;
         font-size: 20px;   
         margin-top: 20px;
-
     }
 
     .form button {
