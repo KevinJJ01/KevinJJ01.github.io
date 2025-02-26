@@ -2,20 +2,20 @@
 
 :root{
     --nav-color: #000000;
-    --primary-color: #001f38;
-    --contain-color: #001f38;
+    --primary-color: #005da8;
+    --contain-color: #005da8;
     --color-font: white;
     --color-title: black; 
     --background-color: black;
 }
 
 /* :root{
-    '--nav-color': 'rgb(238, 238, 238)',
-    '--primary-color': '#005091',
-    '--contain-color': '#005091',
-    '--color-font': 'rgb(0, 0, 0)',
-    '--color-title': 'rgb(255, 255, 255)',
-    '--background-color': 'rgb(238, 238, 238)'
+    --nav-color: 'rgb(238, 238, 238)',
+    --primary-color: '#005091',
+    --contain-color: '#005091',
+    --color-font: 'rgb(0, 0, 0)',
+    --color-title: 'rgb(255, 255, 255)',
+    --background-color: 'rgb(238, 238, 238)'
 } */
 
 .sour-gummy-font {
@@ -39,7 +39,6 @@
 body{
     font-family: "Sour Gummy";
     color: var(--color-font);
-    /* background-image: url(../images/fondo.jpg); */
     background-color: var(--background-color);
     background-size: cover;  
     background-position: center;  
@@ -49,10 +48,21 @@ body{
      --scrollbar-width: 10px; --scrollbar-height: 0px; --scrollbar-border-radius: 0px; --scrollbar-thumb-color: var(--primary-color); --scrollbar-border-thickness: 0px; } body::-webkit-scrollbar { width: var(--scrollbar-width, 20px); height: var(--scrollbar-height, 20px); }body::-webkit-scrollbar-thumb { background: var(--scrollbar-thumb-color, #3B82F6); border: var(--scrollbar-border-thickness, 3px) solid var(--scrollbar-border-color, rgb(255, 255, 255)); border-radius: var(--scrollbar-border-radius, 4px); }body::-webkit-scrollbar-track { background: var(--scrollbar-track-color, #a1a1aa00); }body::-webkit-scrollbar-corner { background: var(--scrollbar-corner-color, #FFFFFF); border: var(--scrollbar-border-thickness, 3px) solid var(--scrollbar-border-color, rgb(255, 255, 255)); border-radius: var(--scrollbar-border-radius, 4px); }body::-webkit-scrollbar-button:vertical:start:increment, #preview::-webkit-scrollbar-button:vertical:end:decrement, #preview::-webkit-scrollbar-button:horizontal:start:increment, #preview::-webkit-scrollbar-button:horizontal:end:decrement { display: var(--show-double-buttons, none); 
     }
 
-
+    video {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        min-width: 100%;
+        min-height: 100%;
+        width: auto;
+        height: auto;
+        z-index: -1;
+        transform: translate(-50%, -50%);
+        object-fit: cover; /* Asegura el recorte adecuado */
+    }
 
 .navegation{
-    background-color: var(--background-color);
+    background-color: #00000010;
     color: var(--color-font);
     display: flex;
     height: 70px;
@@ -195,11 +205,10 @@ body{
     background-color: var(--primary-color);
     border-radius: 10px;
     border: none;
-    box-shadow: 3px 4px 3px var(--color-font);
-    animation-name: button-deslizing;
+    animation: button-deslizing 0.3s linear;
     animation-duration: 3s;
     animation-iteration-count: 1;
-    transition: all 300ms ease-in-out;
+    transition: all 0.3ms ease-in-out;
     cursor: pointer;
     color: var(--color-font);
 }
@@ -220,7 +229,7 @@ body{
     color: var(--color-font);
     border: var(--primary-color) 0.5px solid;
     scale: 1.1;
-    transition-duration: 2s;
+    transition-duration: 0.3s;
     box-shadow: 5px 5px 5px var(--color-font);
 }
 
