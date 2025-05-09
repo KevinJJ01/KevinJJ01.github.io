@@ -392,9 +392,10 @@ video {
     padding: 10px;
     border-radius: 15px;
     margin-left: 13px;
-    width: 170px;
+    width: 270px;
     display: flex;
     flex-direction: column;
+    justify-content: space-evenly;
     border: var(--primary-color) 0.1px solid;
     animation: container-card-deslizing linear both;
     animation-timeline: scroll(root block);
@@ -422,14 +423,14 @@ video {
 
 .title-serv-card {
     font-weight: 700;
-    font-size: 20px;
+    font-size: 24px;
     height: 60px;
 }
 
 .description-serv-card {
-    font-size: 15px;
+    font-size: 20px;
     align-items: center;
-    margin-top: 30px;
+    margin-top: 4px;
 }
 
 
@@ -938,15 +939,15 @@ footer {
 
     .title-serv-card {
         font-weight: 700;
-        font-size: 10px;
-        height: 15px;
+        font-size: 15px;
+        height: 6px;
     }
 
     .description-serv-card {
-        font-size: 8px;
+        font-size: 12px;
         height: 1;
         align-items: center;
-        margin-top: 30px;
+        margin-top: 40px;
     }
 
     /* hasta aca no jajajjaja*/
