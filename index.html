@@ -1,324 +1,426 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=1"/>
-    <link rel="icon" sizes="16x16 32x32 48x48" type="image/png" href="images/laptop-code-solid.svg" />
-    <link rel="stylesheet" href="CSS/index.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, user-scalable=1"
+    />
+    <link
+      rel="icon"
+      sizes="16x16 32x32 48x48"
+      type="image/png"
+      href="images/laptop-code-solid.svg"
+    />
+    <link rel="stylesheet" href="CSS/index.css" />
     <title>Kevin Muñoz - Portafolio</title>
-    <meta name="robots" content="noindex, nofollow">
-    <meta name="description" content="Este es un portafolio que describe los conocimientos y la experiencia de Kevin Muñoz como desarrollador de software, algo que le apasiona y le hace feliz.">
-    <meta name="theme-color" content="Black">
+    <meta name="robots" content="noindex, nofollow" />
+    <meta
+      name="description"
+      content="Este es un portafolio que describe los conocimientos 
+      y la experiencia de Kevin Muñoz como desarrollador de software,
+       algo que le apasiona y le hace feliz."
+    />
+    <meta name="theme-color" content="Black" />
+  </head>
 
-</head>
-
-<body id="body">
+  <body id="body">
     <video id="video_fondo" autoplay muted loop>
-        <source id="source_video" src="./recurses/fondo_black.mp4" type="video/mp4">
-        Tu navegador no soporta videos en HTML5.
+      <source
+        id="source_video"
+        src="./recurses/fondo_black.mp4"
+        type="video/mp4"
+      />
+      Tu navegador no soporta videos en HTML5.
     </video>
 
     <!-- Barra de navegación -->
-    <nav class="navegation"> 
+    <nav class="navegation">
+      <div>
+        <i class="fa-solid fa-circle-half-stroke icon" id="icon-theme"></i>
+      </div>
 
-        <!-- <div class="menu">
-            <i class="fa-solid fa-bars icon-menu" title="menu" onclick="toggleMenu()"></i>
-            <div class="menu-content">
-                <ul class="lista-menu">
-                    <li><a href="#MisConocimientos">Mis Conocimientos!</a></li>
-                    <!-- <li><a href="#MisEstudios">Mis Estudios!</a></li> 
-                    <li><a href="#MisExperiencias">Mis Experiencias!</a></li>
-                    <li><a href="#MisProyectos">Mis Proyectos</a></li>
-                    <li><a href="#Contacto">Contacto</a></li>
-                </ul>
-            </div>
-        </div> -->
-
-        <div><i class="fa-solid fa-circle-half-stroke icon" id="icon-theme"></i></div>
-
-        <div class="profile">
-            <img class="img-profile" src="images/image-title.jpg" alt="">
-            <p class="profile-text">Kevin Muñoz</p>
-        </div>
+      <div class="profile">
+        <img class="img-profile" src="images/image-title.jpg" alt="" />
+        <p class="profile-text">Kevin Muñoz</p>
+      </div>
     </nav>
-
 
     <!-- Título de página -->
     <section class="container-title">
-        <div class="content-text-title">
-            <h1 class="text-title">Desarrollador de Sofware</h1>
-            <a href="Docs/HOJA DE VIDA-KEVIN MUÑOZ.pdf" download="HOJA DE VIDA-KEVIN MUÑOZ.pdf"><button class="cv-but"><h2 class="text-description-title">Hoja de vida <i class="fa-solid fa-download icon-down"></i> </h2></button></a>
-        </div>
+      <div class="content-text-title">
+        <h1 class="text-title">Desarrollador de Sofware</h1>
+        <a
+          href="Docs/HOJA DE VIDA-KEVIN MUÑOZ.pdf"
+          download="HOJA DE VIDA-KEVIN MUÑOZ.pdf"
+          ><button class="cv-but">
+            <h2 class="text-description-title">
+              Hoja de vida <i class="fa-solid fa-download icon-down"></i>
+            </h2></button
+        ></a>
+      </div>
     </section>
 
     <section class="info-myprofile">
-        <!-- Artículo descripción sobre mí -->
-        <section class="container-im">
-            <p class="st-title">¿Quién soy...?</p>
-            <p class="soy-dev">Soy desarrollador de software, egresado del SENA. Me considero una persona inteligente, activa, dedicada, cordial y 
-                con muchas aspiraciones. Estoy en una búsqueda constante de crecimiento tanto personal como profesional.</p>
-        </section>
+      <!-- Artículo descripción sobre mí -->
+      <section class="container-im">
+        <p class="st-title">¿Quién soy...?</p>
+        <p class="soy-dev">
+          Soy desarrollador de software, egresado del SENA. Me considero una
+          persona inteligente, activa, dedicada, cordial y con muchas
+          aspiraciones. Estoy en una búsqueda constante de crecimiento tanto
+          personal como profesional.
+        </p>
+      </section>
 
-        <!-- Artículo descripción estudios -->
-        <section class="container-studies" id="MisEstudios">
-            <p class="st-title">¡Mis estudios!</p>
-                <div class="card-studied">
-                    <p class="overview-title-studies">Técnico en Desarrollo de Software</p>
-                    <p class="overview-studies">SERVICIO NACIONAL DE APRENDIZAJE SENA<br> CULMINACIÓN: NOVIEMBRE 15 DE 2022</p>
-                </div>
-                <div class="card-studied">
-                    <p class="overview-title-studies">Tecnólogo en Análisis y Desarrollo de Software</p>
-                    <p class="overview-studies">SERVICIO NACIONAL DE APRENDIZAJE SENA<br> CULMINACIÓN: JUNIO 17 DE 2024</p>
-                </div>
-        </section>
-
+      <!-- Artículo descripción estudios -->
+      <section class="container-studies" id="MisEstudios">
+        <p class="st-title">¡Mis estudios!</p>
+        <div class="card-studied">
+          <p class="overview-title-studies">
+            Técnico en Desarrollo de Software
+          </p>
+          <p class="overview-studies">
+            SERVICIO NACIONAL DE APRENDIZAJE SENA<br />
+            CULMINACIÓN: NOVIEMBRE 15 DE 2022
+          </p>
+        </div>
+        <div class="card-studied">
+          <p class="overview-title-studies">
+            Tecnólogo en Análisis y Desarrollo de Software
+          </p>
+          <p class="overview-studies">
+            SERVICIO NACIONAL DE APRENDIZAJE SENA<br />
+            CULMINACIÓN: JUNIO 17 DE 2024
+          </p>
+        </div>
+      </section>
     </section>
 
-
     
-
 
     <section class="my-services" id="MisConocimientos">
-        <p class="st-title">¡ Mis Habilidades y Conocimientos !</p>
-        <div class="services">
-            <div class="card-services">
-                <p class="title-serv-card">
-                    Planificación y Análisis de Requisitos
-                </p>
-                <p class="description-serv-card">
-                    Se define el problema que el software debe resolver y se recogen los requisitos del usuario (realización del levantamiento de la información).
-                </p>
-            </div>
-    
-            <div class="card-services">
-                <p class="title-serv-card">
-                    Diseño
-                </p>
-                <p class="description-serv-card">
-                    Se crea la arquitectura del software, se especifican sus componentes y cómo interactuarán entre sí (se diseñan diferentes diagramas de diseño de proyecto).
-                </p>
-            </div>
-    
-            <div class="card-services">
-                <p class="title-serv-card">
-                    Desarrollo o Implementación
-                </p>
-                <p class="description-serv-card">
-                    Se desarrolla el código según el diseño previamente establecido (tanto front-end como back-end).
-                </p>
-            </div>
-    
-            <div class="card-services">
-                <p class="title-serv-card">
-                    Pruebas (Testing)
-                </p>
-                <p class="description-serv-card">
-                    Se verifican y validan las funcionalidades del software, detectando y corrigiendo errores.
-                </p>
-            </div>
-    
-            <div class="card-services">
-                <p class="title-serv-card">
-                    Despliegue
-                </p>
-                <p class="description-serv-card">
-                    El software se pone en producción y se entrega al usuario final.
-                </p>
-            </div>
-    
-            <div class="card-services">
-                <p class="title-serv-card">
-                    Mantenimiento
-                </p>
-                <p class="description-serv-card">
-                    Se realizan actualizaciones y mejoras, así como correcciones de errores a medida que el software se utiliza.
-                </p>
-            </div>
-    
-            <div class="card-services">
-                <p class="title-serv-card">
-                    Manipulación de Bases de Datos SQL
-                </p>
-                <p class="description-serv-card">
-                    Se realiza la debida estructura de una base de datos, como la creación de tablas, relaciones, multiconsultas, triggers, y demás.
-                </p>
-            </div>
-        </div>
-    </section>
+    <p class="st-title">¡ Conocimientos !</p>
 
+      <div class="services">
+        <div class="card-services">
+          <p class="title-serv-card">Planificación y Análisis de Requisitos</p>
+          <p class="description-serv-card">
+            Se define el problema que el software debe resolver y se recogen los
+            requisitos del usuario (realización del levantamiento de la
+            información).
+          </p>
+        </div>
+
+        <div class="card-services">
+          <p class="title-serv-card">Diseño</p>
+          <p class="description-serv-card">
+            Se crea la arquitectura del software, se especifican sus componentes
+            y cómo interactuarán entre sí (se diseñan diferentes diagramas de
+            diseño de proyecto).
+          </p>
+        </div>
+
+        <div class="card-services">
+          <p class="title-serv-card">Desarrollo o Implementación</p>
+          <p class="description-serv-card">
+            Se desarrolla el código según el diseño previamente establecido
+            (tanto front-end como back-end).
+          </p>
+        </div>
+
+        <div class="card-services">
+          <p class="title-serv-card">Pruebas (Testing)</p>
+          <p class="description-serv-card">
+            Se verifican y validan las funcionalidades del software, detectando
+            y corrigiendo errores.
+          </p>
+        </div>
+
+        <div class="card-services">
+          <p class="title-serv-card">Despliegue</p>
+          <p class="description-serv-card">
+            El software se pone en producción y se entrega al usuario final.
+          </p>
+        </div>
+
+        <div class="card-services">
+          <p class="title-serv-card">Mantenimiento</p>
+          <p class="description-serv-card">
+            Se realizan actualizaciones y mejoras, así como correcciones de
+            errores a medida que el software se utiliza.
+          </p>
+        </div>
+
+        <div class="card-services">
+          <p class="title-serv-card">Refactorización y Mejoras.</p>
+          <p class="description-serv-card">
+            Se realizan refactorización y mejoras de software, 
+            esto fuera de los procesos anteriores.
+          </p>
+        </div>
+
+      </div>
+    </section>
 
     <!-- Artículo descripción experiencias -->
     <section class="container-experiences" id="MisExperiencias">
-        <p class="title-exp">¡Mis experiencias!</p>
-        <div class="cards">
-            <div class="card-experiences">
-                <p class="overview-title-experiencies"><strong>Teleperformance - Prácticas</strong></p>
-                <p class="overview-info-experiences">16 DE DICIEMBRE 2023 - 14 DE JUNIO DE 2024<br> DESARROLLADOR DE SOFTWARE</p>
-                <p class="overview-experiencies">
-                    FUNCIONES: Desarrollo con tecnologías HTML, CSS, JavaScript, Python (Flask) y PHP. Manejo de bases de datos SQL y NoSQL. 
-                    Análisis y levantamiento de información. Uso de metodologías Scrum. Experiencia en el ciclo de vida del software.
-                </p>
-                <!-- <img class="ilustrator-experiences" src="" alt="" > -->
-            </div>
+      <p class="title-exp">¡Mis experiencias!</p>
+      <div class="cards">
+        <div class="card-experiences">
+          <p class="overview-title-experiencies">
+            <strong>Teleperformance - Prácticas</strong>
+          </p>
+          <p class="overview-info-experiences">
+            16 DE DICIEMBRE 2023 - 14 DE JUNIO DE 2024<br />
+            DESARROLLADOR DE SOFTWARE
+          </p>
+          <p class="overview-experiencies">
+            FUNCIONES: Desarrollo con tecnologías HTML, CSS, JavaScript, Python
+            (Flask) y PHP. Manejo de bases de datos SQL y NoSQL. Análisis y
+            levantamiento de información. Uso de metodologías Scrum. Experiencia
+            en el ciclo de vida del software.
+          </p>
+          <!-- <img class="ilustrator-experiences" src="" alt="" > -->
         </div>
+      </div>
     </section>
 
-
     <section class="dev-tools">
-        <section class="overview-tecnologis">
-            <p class="sr-title">Tecnologías que he trabajado</p>
-            <div class="overview">
-                <div class="card-tecnology">
-                    <img class="icon-leng" loading="lazy" src="images/html5.svg" title="Html">
-                    <p class="description-tecnology">
-                        Desarrollo de interfaces bajo requerimientos.
-                    </p>
-                </div>
-        
-                <div class="card-tecnology">
-                    <img class="icon-leng" loading="lazy" src="images/css.svg" title="CSS">
-                    <p class="description-tecnology">
-                        Desarrollo de interfaces con CSS, brindando el diseño óptimo que se requiera.
-                    </p>
-                </div>
+      <section class="overview-tecnologis">
+        <p class="sr-title">Tecnologías que he trabajado</p>
+        <div class="overview">
+          <div class="card-tecnology">
+            <img
+              class="icon-leng"
+              loading="lazy"
+              src="images/html5.svg"
+              title="Html"
+            />
+            <p class="description-tecnology">
+              Desarrollo de interfaces bajo requerimientos.
+            </p>
+          </div>
 
-                <div class="card-tecnology">
-                    <img class="icon-leng" loading="lazy" src="images/javascript.svg" title="JavaScript">
-                    <p class="description-tecnology">
-                        Desarrollo en JavaScript
-                    </p>
-                </div>
-        
-                <div class="card-tecnology">
-                    <img class="icon-leng" loading="lazy" src="images/python.svg" title="Python">
-                    <p class="description-tecnology">
-                        Desarrollo en Python nativo o con frameworks como Flask.
-                    </p>
-                </div>
+          <div class="card-tecnology">
+            <img
+              class="icon-leng"
+              loading="lazy"
+              src="images/css.svg"
+              title="CSS"
+            />
+            <p class="description-tecnology">
+              Desarrollo de interfaces con CSS, brindando el diseño óptimo que
+              se requiera.
+            </p>
+          </div>
 
-                <div class="card-tecnology">
-                    <img class="icon-leng" loading="lazy" src="images/mysql.svg" title="MySQL">
-                    <p class="description-tecnology">
-                        Desarrollo de bases de datos MySql
-                    </p>
-                </div>
+          <div class="card-tecnology">
+            <img
+              class="icon-leng"
+              loading="lazy"
+              src="images/javascript.svg"
+              title="JavaScript"
+            />
+            <p class="description-tecnology">Desarrollo en JavaScript</p>
+          </div>
 
-                <div class="card-tecnology">
-                    <img class="icon-leng" loading="lazy" src="images/postgresql.svg" title="PostgreSql">
-                    <p class="description-tecnology">
-                        Desarrollo de bases de datos PostgreSql
-                    </p>
-                </div>
-                <div class="card-tecnology">
-                    <img class="icon-leng" loading="lazy" src="images/bootstrap.svg" title="Bootstrap">
-                    <p class="description-tecnology">
-                        Desarrollo de interfaces con Bootstrap
-                    </p>
-                </div>
-                <div class="card-tecnology">
-                    <img class="icon-leng" loading="lazy" src="images/figma.svg" title="Figma">
-                    <p class="description-tecnology">
-                        Desarrollo de prototipado de sitios web con Figma 
-                    </p>
-                </div>
-                <div class="card-tecnology">
-                    <img class="icon-leng" loading="lazy" src="images/github-dark.svg" title="Github">
-                    <p class="description-tecnology">
-                        Control de versiones de Proyectos con GitHub
-                    </p>
-                </div>
-                <div class="card-tecnology">
-                    <img class="icon-leng" loading="lazy" src="images/vscode.svg" title="Visual Studio Code">
-                    <p class="description-tecnology">
-                        Desarrollo en editor de codigo fuente Visual Studio Code
-                    </p>
-                </div>
+          <div class="card-tecnology">
+            <img
+              class="icon-leng"
+              loading="lazy"
+              src="images/python.svg"
+              title="Python"
+            />
+            <p class="description-tecnology">
+              Desarrollo en Python nativo o con frameworks como Flask.
+            </p>
+          </div>
 
+          <div class="card-tecnology">
+            <img
+              class="icon-leng"
+              loading="lazy"
+              src="images/mysql.svg"
+              title="MySQL"
+            />
+            <p class="description-tecnology">
+              Desarrollo de bases de datos MySql
+            </p>
+          </div>
 
-                
-                
-            </div>
-        </section>
+          <div class="card-tecnology">
+            <img
+              class="icon-leng"
+              loading="lazy"
+              src="images/postgresql.svg"
+              title="PostgreSql"
+            />
+            <p class="description-tecnology">
+              Desarrollo de bases de datos PostgreSql
+            </p>
+          </div>
+          <div class="card-tecnology">
+            <img
+              class="icon-leng"
+              loading="lazy"
+              src="images/bootstrap.svg"
+              title="Bootstrap"
+            />
+            <p class="description-tecnology">
+              Desarrollo de interfaces con Bootstrap
+            </p>
+          </div>
+          <div class="card-tecnology">
+            <img
+              class="icon-leng"
+              loading="lazy"
+              src="images/figma.svg"
+              title="Figma"
+            />
+            <p class="description-tecnology">
+              Desarrollo de prototipado de sitios web con Figma
+            </p>
+          </div>
+          <div class="card-tecnology">
+            <img
+              class="icon-leng"
+              loading="lazy"
+              src="images/github-dark.svg"
+              title="Github"
+            />
+            <p class="description-tecnology">
+              Control de versiones de Proyectos con GitHub
+            </p>
+          </div>
+          <div class="card-tecnology">
+            <img
+              class="icon-leng"
+              loading="lazy"
+              src="images/vscode.svg"
+              title="Visual Studio Code"
+            />
+            <p class="description-tecnology">
+              Desarrollo en editor de codigo fuente Visual Studio Code
+            </p>
+          </div>
+        </div>
+      </section>
 
-            <section class="my-proyects" id="MisProyectos">
-                    <p class="st-title">¡Mis Proyectos!</p>
-                <div class="cards-proyect">
-                    <div class="card-proyects">
-                        <p class="title-proy-card">
-                            Próximamente
-                        </p>
-                        <!-- <p class="description-proy-card">
+      <section class="my-proyects" id="MisProyectos">
+        <p class="st-title">¡Mis Proyectos!</p>
+        <div class="cards-proyect">
+          <div class="card-proyects">
+            <p class="title-proy-card">Próximamente</p>
+            <!-- <p class="description-proy-card">
                             ....
                         </p>
                         <img class="img-proy-card" loading="lazy" src="" alt=""> -->
-                    </div>
-                </div>
-
-
-            </section>
-        
+          </div>
+        </div>
+      </section>
     </section>
 
-    
-
     <footer class="container-footer" id="contacto">
-
-        <section class="contact" id="email">
-            <div class="container-form">
-                <p class="title-contact">¡Déjame tu opinión o sugerencias aquí!</p>
-                <form class="form" id="contact-form">
-                    <ul>
-                        <li>
-                            <label for="name">Nombre:</label><br>
-                            <input class="name-in" type="text" id="name" name="user_name" placeholder="Ingresa tu nombre aqui!" required />
-                        </li>
-                        <li>
-                            <label for="mail">Asunto</label><br>
-                            <input type="text" id="mail" name="asunto" placeholder="Ingresa el asunto de tu mensaje aqui!" required />
-                        </li>
-                        <li>
-                            <label for="msg"  >Mensaje:</label><br>
-                            <textarea type="text" id="msg" name="message" placeholder="Ingresa tu mensaje aqui!" required> </textarea>
-                        </li>
-                        <button class="but-form" type="submit">Enviar</button>
-                    </ul>
-                </form>
-            </div>
-        
-            
-
-            
-            
-              
-            <div class="card-info-contact" id="Contacto">
-                <p class="title-contact">Ponte en contacto conmigo!</p>
-    
-                <p class="contact-info">Telefono:</p>
-                <p class="contact-info-1">+57 3212174855</p>
-    
-                <p class="contact-info">Correo Electrónico:</p>
-                <p class="contact-info-1">munozcastanedakevinjulian@gmail.com</p>
-    
-                <p class="contact-info">Dirección:</p>
-                <p class="contact-info-1">Calle 72 sur #18a-85 Este</p>
-
-                <div class="icons">
-                    <a class="icon" loading="lazy" href="https://github.com/KevinJJ01" target="_blank" rel="noreferrer" title="Github"><i class="fa-brands fa-github icon"></i></a>
-                    <a class="icon" loading="lazy" href="https://www.linkedin.com/in/kevin-mu%C3%B1oz-5147982aa/" target="_blank" rel="noreferrer" title="Linkedin" ><i class="fa-brands fa-linkedin icon"></i></a>
-                    <a class="icon" loading="lazy" href="mailto:munozcastanedakevinjulian@gmail.com" target="_blank" rel="noreferrer" title="Correo"><i class="fa-solid fa-envelope icon"></i></a>      
-                </div>
-
-            </div>
-    
-        </section>
-
-        <div class="creditos">
-            <p class="create">Creado por Kevin Muñoz </p>
-            <p class="info-footer">Año 2024</p>
+      <section class="contact" id="email">
+        <div class="container-form">
+          <p class="title-contact">¡Déjame tu opinión o sugerencias aquí!</p>
+          <form class="form" id="contact-form">
+            <ul>
+              <li>
+                <label for="name">Nombre:</label><br />
+                <input
+                  class="name-in"
+                  type="text"
+                  id="name"
+                  name="user_name"
+                  placeholder="Ingresa tu nombre aqui!"
+                  required
+                />
+              </li>
+              <li>
+                <label for="mail">Asunto</label><br />
+                <input
+                  type="text"
+                  id="mail"
+                  name="asunto"
+                  placeholder="Ingresa el asunto de tu mensaje aqui!"
+                  required
+                />
+              </li>
+              <li>
+                <label for="msg">Mensaje:</label><br />
+                <textarea
+                  type="text"
+                  id="msg"
+                  name="message"
+                  placeholder="Ingresa tu mensaje aqui!"
+                  required
+                >
+                </textarea>
+              </li>
+              <button class="but-form" type="submit">Enviar</button>
+            </ul>
+          </form>
         </div>
+
+        <div class="card-info-contact" id="Contacto">
+          <p class="title-contact">Ponte en contacto conmigo!</p>
+
+          <p class="contact-info">Telefono:</p>
+          <p class="contact-info-1">+57 3212174855</p>
+
+          <p class="contact-info">Correo Electrónico:</p>
+          <p class="contact-info-1">munozcastanedakevinjulian@gmail.com</p>
+
+          <p class="contact-info">Dirección:</p>
+          <p class="contact-info-1">Calle 72 sur #18a-85 Este</p>
+
+          <div class="icons">
+            <a
+              class="icon"
+              loading="lazy"
+              href="https://github.com/KevinJJ01"
+              target="_blank"
+              rel="noreferrer"
+              title="Github"
+              ><i class="fa-brands fa-github icon"></i
+            ></a>
+            <a
+              class="icon"
+              loading="lazy"
+              href="https://www.linkedin.com/in/kevin-mu%C3%B1oz-5147982aa/"
+              target="_blank"
+              rel="noreferrer"
+              title="Linkedin"
+              ><i class="fa-brands fa-linkedin icon"></i
+            ></a>
+            <a
+              class="icon"
+              loading="lazy"
+              href="mailto:munozcastanedakevinjulian@gmail.com"
+              target="_blank"
+              rel="noreferrer"
+              title="Correo"
+              ><i class="fa-solid fa-envelope icon"></i
+            ></a>
+          </div>
+        </div>
+      </section>
+
+      <div class="creditos">
+        <p class="create">Creado por Kevin Muñoz</p>
+        <p class="info-footer">Año 2024</p>
+      </div>
     </footer>
-</body>
-    <script src="https://kit.fontawesome.com/c628e42b8b.js" crossorigin="anonymous"></script>
-    <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
-    <script src="./JS/Index.js"></script>
+  </body>
+  <script
+    src="https://kit.fontawesome.com/c628e42b8b.js"
+    crossorigin="anonymous"
+  ></script>
+  <script
+    type="text/javascript"
+    src="https://cdn.emailjs.com/dist/email.min.js"
+  ></script>
+  <script src="./JS/Index.js"></script>
 </html>
