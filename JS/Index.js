@@ -1,89 +1,236 @@
-const iconTheme = document.getElementById("icon-theme")
+/**
+ * ============================================
+ * PORTAFOLIO KEVIN MUÑOZ - JAVASCRIPT
+ * ============================================
+ * Funcionalidades:
+ * - Cambio de tema (claro/oscuro)
+ * - Video de fondo dinámico
+ * - Envío de formulario de contacto via EmailJS
+ * ============================================
+ */
 
-function _0x4d87(_0x433e27,_0x138fba){const _0x5356de=_0x5356();return _0x4d87=function(_0x4d875f,_0x428930){_0x4d875f=_0x4d875f-0x1a1;let _0x5b5e46=_0x5356de[_0x4d875f];return _0x5b5e46;},_0x4d87(_0x433e27,_0x138fba);}const _0x16631f=_0x4d87;(function(_0x4166a8,_0x5748ec){const _0x1a637c=_0x4d87,_0x24026a=_0x4166a8();while(!![]){try{const _0x3141d6=parseInt(_0x1a637c(0x1a4))/0x1*(parseInt(_0x1a637c(0x1b2))/0x2)+parseInt(_0x1a637c(0x1b4))/0x3*(parseInt(_0x1a637c(0x1b6))/0x4)+-parseInt(_0x1a637c(0x1a1))/0x5*(parseInt(_0x1a637c(0x1a5))/0x6)+-parseInt(_0x1a637c(0x1a9))/0x7*(-parseInt(_0x1a637c(0x1a2))/0x8)+-parseInt(_0x1a637c(0x1a3))/0x9+-parseInt(_0x1a637c(0x1af))/0xa+parseInt(_0x1a637c(0x1ad))/0xb;if(_0x3141d6===_0x5748ec)break;else _0x24026a['push'](_0x24026a['shift']());}catch(_0x445cff){_0x24026a['push'](_0x24026a['shift']());}}}(_0x5356,0xe7354),emailjs[_0x16631f(0x1b0)](_0x16631f(0x1b5)),document[_0x16631f(0x1ae)]('.form')['addEventListener'](_0x16631f(0x1a6),function(_0x5ab212){const _0x506bb6=_0x16631f;_0x5ab212[_0x506bb6(0x1a7)]();const _0x2ddb7a=_0x5ab212[_0x506bb6(0x1aa)];emailjs[_0x506bb6(0x1ac)](_0x506bb6(0x1a8),_0x506bb6(0x1b1),_0x2ddb7a)[_0x506bb6(0x1b3)](function(_0x4371b2){alert('¡Correo\x20enviado\x20con\x20éxito!');},function(_0x5771bb){const _0x2c3ab8=_0x506bb6;alert(_0x2c3ab8(0x1ab));});}));function _0x5356(){const _0x6405cd=['init','template_qgx1kbb','2ojlhQB','then','70140Zwivsa','e2Sl3H41c1FHJlRF7','252tIvQJR','6446905SkfaLI','1407752uWErFW','15681645VkUiKw','436025pIBdhn','6XRoStU','submit','preventDefault','service_6d0nxod','28GMoXsi','target','Hubo\x20un\x20error\x20al\x20enviar\x20el\x20correo.','sendForm','25673373XLeEtp','querySelector','9679700gTlqEz'];_0x5356=function(){return _0x6405cd;};return _0x5356();}
-
-function toggleMenu() {
-  var menuContent = document.querySelector('.menu-content');
-  if (menuContent.style.display === "block") {
-      menuContent.style.display = "none";
-  } else {
-      menuContent.style.display = "block";
+// ============================================
+// CONSTANTES Y CONFIGURACIÓN
+// ============================================
+const CONFIG = {
+  emailJS: {
+    publicKey: 'e2Sl3H41c1FHJlRF7',
+    serviceId: 'service_6d0nxod',
+    templateId: 'template_qgx1kbb'
+  },
+  videos: {
+    dark: './recurses/fondo_black.mp4',
+    light: './recurses/fondo_white.mp4'
   }
-}
-
-
-//FUNCION PARA CAMBIAR EL TEMA A OSCURO 
-iconTheme.addEventListener('click', function () {
-  // Conjunto actual esperado (tema claro)
-  let currentVariables = {
-      '--nav-color': 'rgb(238, 238, 238)',
-      '--primary-color': '#ffffff',
-      '--contain-color': '#ffffff',
-      '--color-font': 'rgb(0, 0, 0)',
-      '--color-title': 'rgb(255, 255, 255)',
-      '--background-color': 'rgb(238, 238, 238)'
-  };
-
-  // Nuevo conjunto de variables (tema oscuro)
-  let newVariables = {
-      '--nav-color': '#000000',
-      '--primary-color': '#005da8',
-      '--contain-color': '#005da8',
-      '--color-font': 'white',
-      '--color-title': 'black',
-      '--background-color': 'black'
-  };
-
-  // Obtener las variables actuales de :root
-  let rootStyles = getComputedStyle(document.documentElement);
-  let isMatch = true;
-
-  // Verificar si las variables actuales coinciden con el conjunto esperado
-  for (let [key, value] of Object.entries(currentVariables)) {
-      if (rootStyles.getPropertyValue(key).trim() !== value) {
-          isMatch = false;
-          break;
-      }
-  }
-
-  // Cambiar las variables CSS y el video de fondo
-  if (isMatch) {
-      // Aplicar el tema oscuro
-      for (let [key, value] of Object.entries(newVariables)) {
-          document.documentElement.style.setProperty(key, value);
-      }
-    
-      CambiarVideoFondo('black');
-  } else {
-      // Volver al tema claro
-      for (let [key, value] of Object.entries(currentVariables)) {
-          document.documentElement.style.setProperty(key, value);
-      }
-
-      
-      CambiarVideoFondo('white');
-  }
-});
-
-
-function CambiarVideoFondo(fondo) {
-  const video = document.getElementById("video_fondo");
-  const source = document.getElementById("source_video");
-
-  try {
-      if (fondo === "black") {
-          source.src = "../recurses/fondo_black.mp4";
-      } else {
-          source.src = "../recurses/fondo_white.mp4";
-      }
-      video.load();
-      video.play();
-  } catch (error) {
-      console.warn("No se pudo cambiar el video de fondo", error);
-  }
-}
-
-//FUNCIONES DE CARGA GLOBAL 
-window.onload = function() {
-  CambiarVideoFondo("black");
 };
+
+
+// ============================================
+// ELEMENTOS DEL DOM
+// ============================================
+const DOM = {
+  themeToggle: document.getElementById('icon-theme'),
+  video: document.getElementById('video_fondo'),
+  videoSource: document.getElementById('source_video'),
+  contactForm: document.querySelector('.form')
+};
+
+
+// ============================================
+// GESTIÓN DE TEMAS
+// ============================================
+const ThemeManager = {
+  currentTheme: 'dark',
+
+  /**
+   * Alterna entre tema claro y oscuro
+   */
+  toggle() {
+    this.currentTheme = this.currentTheme === 'dark' ? 'light' : 'dark';
+    this.apply();
+    VideoManager.changeBackground(this.currentTheme);
+  },
+
+  /**
+   * Aplica el tema actual
+   */
+  apply() {
+    const root = document.documentElement;
+
+    // Aplicar o quitar clase theme-light
+    if (this.currentTheme === 'light') {
+      root.classList.add('theme-light');
+    } else {
+      root.classList.remove('theme-light');
+    }
+
+    // Log para debugging
+    console.log(`Tema cambiado a: ${this.currentTheme}`);
+  },
+
+  /**
+   * Inicializa el tema desde localStorage o usa el predeterminado
+   */
+  init() {
+    const savedTheme = localStorage.getItem('portfolioTheme') || 'dark';
+    this.currentTheme = savedTheme;
+    this.apply();
+  },
+
+  /**
+   * Guarda el tema actual en localStorage
+   */
+  save() {
+    localStorage.setItem('portfolioTheme', this.currentTheme);
+  }
+};
+
+
+// ============================================
+// GESTIÓN DE VIDEO DE FONDO
+// ============================================
+const VideoManager = {
+  /**
+   * Cambia el video de fondo según el tema
+   * @param {string} theme - 'dark' o 'light'
+   */
+  changeBackground(theme) {
+    if (!DOM.video || !DOM.videoSource) {
+      console.warn('Elementos de video no encontrados');
+      return;
+    }
+
+    try {
+      const videoSrc = theme === 'dark' ? CONFIG.videos.dark : CONFIG.videos.light;
+      DOM.videoSource.src = videoSrc;
+      DOM.video.load();
+      DOM.video.play().catch(err => {
+        console.warn('No se pudo reproducir el video:', err);
+      });
+    } catch (error) {
+      console.error('Error al cambiar el video de fondo:', error);
+    }
+  }
+};
+
+
+// ============================================
+// GESTIÓN DEL FORMULARIO DE CONTACTO
+// ============================================
+const ContactFormManager = {
+  /**
+   * Inicializa EmailJS
+   */
+  initEmailJS() {
+    emailjs.init(CONFIG.emailJS.publicKey);
+  },
+
+  /**
+   * Maneja el envío del formulario
+   * @param {Event} event - Evento del formulario
+   */
+  async handleSubmit(event) {
+    event.preventDefault();
+    
+    const formData = event.target;
+    const submitButton = formData.querySelector('.form__submit');
+    
+    // Deshabilitar botón durante el envío
+    if (submitButton) {
+      submitButton.disabled = true;
+      submitButton.textContent = 'Enviando...';
+    }
+
+    try {
+      await emailjs.sendForm(
+        CONFIG.emailJS.serviceId,
+        CONFIG.emailJS.templateId,
+        formData
+      );
+      
+      alert('¡Correo enviado con éxito!');
+      formData.reset();
+    } catch (error) {
+      console.error('Error al enviar el formulario:', error);
+      alert('Hubo un error al enviar el correo. Por favor, intenta nuevamente.');
+    } finally {
+      // Rehabilitar botón
+      if (submitButton) {
+        submitButton.disabled = false;
+        submitButton.textContent = 'Enviar mensaje';
+      }
+    }
+  },
+
+  /**
+   * Configura el listener del formulario
+   */
+  init() {
+    if (DOM.contactForm) {
+      DOM.contactForm.addEventListener('submit', this.handleSubmit.bind(this));
+    }
+  }
+};
+
+
+// ============================================
+// EVENT LISTENERS
+// ============================================
+const EventHandlers = {
+  /**
+   * Configura todos los event listeners
+   */
+  init() {
+    // Toggle de tema
+    if (DOM.themeToggle) {
+      DOM.themeToggle.addEventListener('click', () => {
+        ThemeManager.toggle();
+        ThemeManager.save();
+      });
+    }
+  }
+};
+
+
+// ============================================
+// INICIALIZACIÓN DE LA APLICACIÓN
+// ============================================
+const App = {
+  /**
+   * Inicializa todas las funcionalidades
+   */
+  init() {
+    // Inicializar tema
+    ThemeManager.init();
+    
+    // Inicializar video de fondo
+    VideoManager.changeBackground(ThemeManager.currentTheme);
+    
+    // Inicializar EmailJS y formulario
+    ContactFormManager.initEmailJS();
+    ContactFormManager.init();
+    
+    // Configurar event listeners
+    EventHandlers.init();
+    
+    console.log('Portafolio inicializado correctamente');
+  }
+};
+
+
+// ============================================
+// EJECUCIÓN AL CARGAR LA PÁGINA
+// ============================================
+// Esperar a que el DOM esté completamente cargado
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', () => App.init());
+} else {
+  // El DOM ya está listo
+  App.init();
+}
+
+
+// Alternativa con window.onload (espera a que todos los recursos estén cargados)
+window.addEventListener('load', () => {
+  console.log('Página completamente cargada');
+});
